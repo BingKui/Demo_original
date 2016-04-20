@@ -23,7 +23,11 @@
 			var _pass = _th.createDiv("ui-pass").appendTo($('body'));
 			//弹窗
 			var _dialog = _th.createDiv("ui-pass-window").appendTo(_pass);
-			_th.createDiv("ui-window-title").html(_th.opts.title).appendTo(_dialog);
+			var _title = _th.createDiv("ui-window-title").html(_th.opts.title).appendTo(_dialog);
+			//增加关闭按钮
+			$("<span></span>").addClass("ui-window-close").appendTo(_title).on("touchend",function(){
+				_th.close();
+			});
 			_th.createDialogContent().appendTo(_dialog);
 			_th.createInputList().appendTo(_dialog);
 			//键盘
