@@ -1,0 +1,200 @@
+.ui-pass{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	font-family: "微软雅黑";
+	background-color: rgba(6,6,6,.6);
+}
+/*顶部弹框*/
+.ui-pass-window{
+	width: 259px;
+	height: auto;
+	overflow: hidden;
+	margin: 0 auto;
+	margin-top:20% ;
+	background-color: #fff;
+}
+.ui-window-title{
+	height: 39px;
+	border-bottom: 1px solid #ccc;
+	text-align: center;
+	font-weight: bold;
+	line-height: 40px;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: default;
+}
+.ui-window-close{
+	display: block;
+	position: relative;
+	left: 219px;
+	top: -40px;
+	width: 40px;
+	height: 39px;
+}
+.ui-window-close:active{
+	background-color: #007AFF;
+}
+.ui-window-close:after,
+.ui-window-close:before{
+	display: block;
+	width: 14px;
+	height: 2px;
+	background-color: #333;
+	position: absolute;
+	transform: rotate(45deg);
+	border-radius: 2px;
+	left: 13px;
+	top: 19px;
+	content: "";
+}
+.ui-window-close:before{
+	transform: rotate(-45deg);
+}
+.ui-window-content{
+	width: 100%;
+	height: auto;
+}
+.ui-window-content .money{
+	width: 100%;
+	height: 50px;
+	padding-top: 15px;
+	overflow: hidden;
+}
+
+.ui-window-content .money .info,
+.ui-window-content .money .num{
+	width: 100%;
+	font-size: 14px;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: default;
+}
+.ui-window-content .money .num{
+	font-size: 28px;
+}
+.ui-window-content .bottom-item{
+	height: auto;
+	width: 100%;
+	margin-top: 28px;
+	margin-bottom: 8px;
+	overflow: hidden;
+}
+.ui-window-content .bottom-item .tip,
+.ui-window-content .bottom-item .error-msg{
+	width: 50%;
+	font-size: 13px;
+	line-height: 15px;
+	color: #787878;
+	margin: 0;
+	padding: 0;
+	float: left;
+	text-indent: 15px;
+	display: inline-block;
+	border: none;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	cursor: default;
+}
+.ui-window-content .bottom-item .error-msg{
+	color: red;
+	display: none;
+	text-align: center;
+}
+
+.ui-window-passlist{
+	width: 100%;
+	height: 40px;
+	padding: 15px;
+	border-top: 1px solid #ccc;
+}
+.ui-window-passlist .pass-item{
+	width: 37px;
+	height: 37px;
+	display: inline-block;
+	float: left;
+	margin: 0;
+	padding: 0;
+	border-radius: 0;
+	box-shadow: none;
+	border: 1px solid #CCCCCC;
+	background-color: #F2F2F2;
+	border-right: none;
+	text-align: center;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+	font-size: 20px;
+	-webkit-appearance: none;
+}
+.ui-window-passlist .pass-item:disabled{
+	opacity: 1;
+}
+.ui-window-passlist .pass-item:last-child{
+	border-right: 1px solid #CCCCCC;
+}
+/*底部键盘*/
+.ui-pass-keyboard{
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: auto;
+	overflow: hidden;
+	width: 100%;
+	background-color: #fff;
+}
+.ui-keyboard{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	/*盒模型*/
+	display: -webkit-box;
+	display: -moz-box;
+	display: box;
+	/*横向or纵向*/
+	-webkit-box-orient: horizontal;
+	/*属性值：[horizontal]横向/[vertical]纵向*/
+	-moz-box-orient: horizontal;
+	box-orient: horizontal;
+	margin: auto;
+	border: none;
+	width: 100%;
+	border-top: 1px solid #ccc;
+}
+.ui-keyboard li {
+	/*占有比例*/
+	-webkit-box-flex: 1;
+	-moz-box-flex: 1;
+	box-flex: 1;
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	color: #333;
+	font-weight: bold;
+	-ms-user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	border-right:1px solid #ccc;
+	-webkit-tap-highlight-color:rgba(0,0,0,0);
+	-webkit-tap-highlight-color: transparent;
+}
+.ui-keyboard .symbol:active,
+.ui-keyboard li:hover{
+	background-color: #007AFF;
+	color: #fff;
+}
+span.off{
+	width: 40px;
+	height: 20px;
+	display: block;
+	margin: 0 auto;
+}

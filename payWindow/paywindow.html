@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>支付宝支付密码</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="paywindow.css" />
+		<style type="text/css">
+			.btn{
+				width: 80%;
+				height: 40px;
+				display: block;
+				margin: 0 auto;
+				border: none;
+				background-color: #0099FF;
+				color: #fff;
+				font-size: 20px;
+				font-weight: bold;
+				outline: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="heh">
+			<p>订单号：43001890245</p>
+			<p>金额：100元</p>
+			<button class="btn">支付</button>
+		</div>
+	</body>
+	<script src="../lib/jquery/2.1.4/jquery.js" type="text/javascript" charset="utf-8"></script>
+	<script src="paywindow.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		var demo = $(".btn").UISeedPass({
+			checkFun:function(){
+				var _in_val = demo.getInputValue();
+				if(_in_val == '123456'){
+					demo.close();
+					alert("校验成功");
+				}else{
+					demo.openError("密码错误");
+				}
+			}
+		});
+	</script>
+
+</html>
